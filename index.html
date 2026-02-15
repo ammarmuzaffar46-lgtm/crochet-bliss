@@ -28,19 +28,13 @@
         <button class="close-btn" onclick="toggleCart()">×</button>
     </div>
     <hr>
-    <div id="cart-items-container"></div>
     <div class="cart-footer">
-        <h3>Total: Rs. <span id="cart-total">0</span></h3>
-<a href="https://wa.me/923180535144?text=Hello! I want to order items from CrochetBliss." 
-   target="_blank" 
-   style="text-decoration: none;">
-   <button class="checkout-btn" style="width: 100%; cursor: pointer;">
-      Order Now
-   </button>
-</a>
-</button>
-    </div>
-    </div>
+    <h3>Total: Rs. <span id="cart-total">0</span></h3>
+    <button class="checkout-btn" onclick="sendWhatsApp()" style="width: 100%; cursor: pointer;">
+        Order Now (WhatsApp)</button>
+    <button class="clear-btn" onclick="clearCart()" style="width: 100%; margin-top: 10px; cursor: pointer;">
+        Clear Cart</button>
+</div>
     <main class="main-content">
         <header class="hero">
             <div class="hero-text">
@@ -71,4 +65,5 @@
 </main>
     <script src="script.js"></script>
 </body>
+
 </html>
