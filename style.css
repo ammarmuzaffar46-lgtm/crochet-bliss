@@ -160,8 +160,6 @@ body { background: var(--bg); color: #2c2c2c; overflow-x: hidden; }
         position: relative;
         padding: 20px;
     }
-
-    /* 2. Main content ka margin khatam karna */
     .main-content {
         margin-left: 0 !important;
         padding: 15px !important;
@@ -173,30 +171,22 @@ body { background: var(--bg); color: #2c2c2c; overflow-x: hidden; }
         flex-direction: column;
         text-align: center;
     }
-.hero-text h1 {
-        font-size: 28px !important; 
+    .hero-text h1 {
+        font-size: 26px !important;
     }
     .about-card {
-        flex-direction: column !important; 
-        height: auto !important;
+        flex-direction: column !important;
         width: 100% !important;
     }
     .about-image {
         width: 100% !important;
         height: 200px !important;
     }
-
-    .about-info {
-        padding: 20px !important;
-        text-align: center;
-    }
-    .cart-btn {
-        width: 90%;
-        margin: 10px auto;
-        display: block;
-    }
     .product-grid {
-        grid-template-columns: 1fr !important; 
+        grid-template-columns: 1fr !important;
         gap: 15px;
+    }
+    .cart-sidebar {
+        width: 100% !important;
     }
 }
