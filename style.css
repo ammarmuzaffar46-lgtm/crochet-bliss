@@ -150,4 +150,53 @@ body { background: var(--bg); color: #2c2c2c; overflow-x: hidden; }
     border-radius: 10px;
     font-weight: bold;
     cursor: pointer;
+
+}
+* --- Mobile Responsive Styling --- */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 20px;
+    }
+
+    /* 2. Main content ka margin khatam karna */
+    .main-content {
+        margin-left: 0 !important;
+        padding: 15px !important;
+    }
+    .hero {
+        height: auto !important;
+        min-height: 250px;
+        padding: 30px 20px !important;
+        flex-direction: column;
+        text-align: center;
+    }
+.hero-text h1 {
+        font-size: 28px !important; 
+    }
+    .about-card {
+        flex-direction: column !important; 
+        height: auto !important;
+        width: 100% !important;
+    }
+    .about-image {
+        width: 100% !important;
+        height: 200px !important;
+    }
+
+    .about-info {
+        padding: 20px !important;
+        text-align: center;
+    }
+    .cart-btn {
+        width: 90%;
+        margin: 10px auto;
+        display: block;
+    }
+    .product-grid {
+        grid-template-columns: 1fr !important; 
+        gap: 15px;
+    }
 }
