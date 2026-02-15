@@ -1,0 +1,94 @@
+:root {
+    --primary-bg: #fd63633e;
+    --sidebar-bg: #f3d2d2;
+    --accent: #c08f8f;
+    --dark-text: #514545;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; scroll-behavior: smooth; }
+body { background: var(--primary-bg); display: flex; color: var(--dark-text); }
+
+/* Sidebar */
+.sidebar { width: 280px; height: 100vh; background: var(--sidebar-bg); position: fixed; padding: 40px 20px; border-right: 1px solid #f0f0f0; }
+.logo { font-family: 'Playfair Display', serif; font-size: 32px; margin-bottom: 40px; font-weight: bold; }
+.logo span { color: var(--accent); }
+.nav-menu { display: flex; flex-direction: column; gap: 12px; }
+.nav-link { border: none; background: none; text-align: left; padding: 15px; border-radius: 15px; cursor: pointer; color: #666; text-decoration: none; font-size: 15px; }
+.nav-link:hover, .nav-link.active { background: var(--accent); color: white; font-weight: 600; }
+
+/* Main Content */
+.wrapper { margin-left: 280px; width: 100%; padding: 40px; }
+.top-nav { display: flex; justify-content: space-between; align-items: center; margin-bottom: 50px; }
+.search-bar { background: white; padding: 12px 25px; border-radius: 50px; display: flex; align-items: center; box-shadow: 0 4px 15px rgba(0,0,0,0.02); }
+.search-bar input { border: none; outline: none; width: 320px; font-size: 14px; }
+.basket-btn { background: var(--dark-text); color: white; padding: 12px 25px; border-radius: 50px; cursor: pointer; position: relative; }
+#count-badge { background: var(--accent); position: absolute; top: -5px; right: -5px; padding: 2px 8px; border-radius: 50%; font-size: 12px; }
+
+/* Grid */
+.items-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 25px; margin-bottom: 80px; }
+.card { background: white; border-radius: 25px; padding: 18px; text-align: center; transition: 0.3s; }
+.card:hover { transform: translateY(-10px); box-shadow: 0 15px 35px rgba(0,0,0,0.05); }
+.card img { width: 100%; height: 220px; object-fit: cover; border-radius: 20px; }
+.card h3 { margin: 15px 0 5px; font-size: 17px; }
+.price-tag { color: var(--accent); font-weight: 700; font-size: 18px; display: block; margin-bottom: 15px; }
+.buy-btn { background: var(--dark-text); color: white; border: none; padding: 12px; width: 100%; border-radius: 12px; cursor: pointer; }
+
+/* Maker Box (As seen in edited-image.jpg) */
+.maker-box { margin-top: 50px; background: white; border-radius: 35px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.03); }
+.maker-content { display: flex; align-items: center; }
+.maker-img { width: 45%; height: 400px; }
+.maker-img img { width: 100%; height: 100%; object-fit: cover; }
+.maker-text { width: 55%; padding: 50px; }
+.maker-text h2 { font-family: 'Playfair Display', serif; font-size: 38px; margin: 15px 0; }
+.sub { color: var(--accent); font-weight: 600; text-transform: uppercase; font-size: 12px; letter-spacing: 2px; }
+
+/* Side Cart */
+.side-cart { position: fixed; right: -450px; top: 0; width: 400px; height: 100vh; background: rgb(230, 186, 188); z-index: 1000; transition: 0.5s; padding: 40px; box-shadow: -10px 0 30px rgba(0,0,0,0.05); }
+.side-cart.active { right: 0; }
+.wa-order { background: #c19090; color: rgb(12, 12, 12); border: none; width: 100%; padding: 18px; border-radius: 15px; font-weight: bold; cursor: pointer; margin-top: 30px; }
+
+@media (max-width: 1000px) {
+    .sidebar { display: none; }
+    .wrapper { margin-left: 0; padding: 20px; }
+    .maker-content { flex-direction: column; }
+    .maker-img, .maker-text { width: 100%; }
+}
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 20px;
+        border-right: none;
+        border-bottom: 1px solid #eee;
+    }
+
+    .wrapper, .main-container {
+        margin-left: 0 !important;
+        padding: 15px;
+    }
+
+    .top-nav, .header {
+        flex-direction: column;
+        gap: 15px;
+        align-items: stretch;
+    }
+
+    .search-bar input {
+        width: 100%;
+    }
+
+    .items-grid, .product-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px;
+    }
+
+    .maker-content, .about-card {
+        flex-direction: column;
+    }
+
+    .maker-img, .maker-text, .about-img, .about-info {
+        width: 100% !important;
+        height: auto;
+    }
+}

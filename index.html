@@ -1,0 +1,69 @@
+x<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crochet Bliss</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <aside class="sidebar">
+        <div class="logo">Crochet<span>Bliss</span></div>
+        <nav class="nav-menu">
+            <button class="nav-link active" onclick="filterItems('all', this)">✨ All Masterpieces</button>
+            <button class="nav-link" onclick="filterItems('Bags', this)">👜  Bags</button>
+            <button class="nav-link" onclick="filterItems('Flowers', this)">💐 Flowers</button>
+            <button class="nav-link" onclick="filterItems('Gajras', this)">🏵️ Gajras</button>
+            <button class="nav-link" onclick="filterItems('Keychains', this)">🔑 Keychains</button>
+            <button class="nav-link" onclick="filterItems('Gifts', this)">🎁 Gifts</button>
+            <a href="#about-section" class="nav-link">🌸 About The Maker</a>
+        </nav>
+    </aside>
+    <main class="wrapper">
+        <header class="top-nav">
+            <div class="search-bar">
+                <input type="text" id="mainSearch" placeholder="Find your perfect loop..." onkeyup="searchFn()">
+                <span class="search-icon">🔍</span>
+            </div>
+            <div class="basket-btn" onclick="openCart()">
+                <span>Your Basket</span>
+                <span id="count-badge">0</span>
+            </div>
+        </header>
+        <section class="items-grid" id="productDisplay">
+            </section>
+        <section id="about-section" class="maker-box">
+            <div class="maker-content">
+                <div class="maker-img">
+                    <img src="images/logo1.jpg" alt="Crochet Art">
+                </div>
+                <div class="maker-text">
+                    <span class="sub">Meet the Maker</span>
+                    <h2>Every piece tells a story...</h2>
+                    <p>Welcome to Crochet Bliss! Here, we believe every loop is a memory. Each item is carefully stitched with premium yarn and endless patience.</p>
+                    <div class="tags">#CrochetBliss #HandmadeMagic #StitchedWithLove</div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div id="sideCart" class="side-cart">
+        <div class="cart-top">
+            <h2>Your Selection</h2>
+            <button onclick="openCart()">❌</button>
+        </div>
+        <div id="cartList" class="cart-list">
+            <p class="empty">No items yet.</p>
+        </div>
+        <div class="cart-bottom">
+            <div class="total">
+                <span>Total:</span>
+                <span id="totalPrice">Rs. 0</span>
+            </div>
+            <button class="wa-order" onclick="whatsappOrder()">Order via WhatsApp</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
